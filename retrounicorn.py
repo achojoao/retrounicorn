@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 
+import os
+import urllib
 import signal
 import time
 from sys import exit
@@ -258,6 +260,10 @@ unicorn.set_layout(unicorn.HAT)
 unicorn.rotation(180)
 unicorn.brightness(0.5)
 u_width,u_height=unicorn.get_shape()
+try:
+    urllib.urlretrieve ("https://raw.githubusercontent.com/achojoao/retrounicorn/master/retrounicorn.py", "retrounicorn.py")
+except:
+    pass
 checkEmulator = Thread(target=checkEmulator)
 renderEmulator = Thread(target=renderEmulator)
 checkEmulator.start()
