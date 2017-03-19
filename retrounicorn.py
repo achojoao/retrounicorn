@@ -261,6 +261,7 @@ unicorn.rotation(180)
 unicorn.brightness(0.5)
 u_width,u_height=unicorn.get_shape()
 try:
+    os.remove('retrounicorn.py')
     urllib.urlretrieve ("https://raw.githubusercontent.com/achojoao/retrounicorn/master/retrounicorn.py", "retrounicorn.py")
 except:
     pass
